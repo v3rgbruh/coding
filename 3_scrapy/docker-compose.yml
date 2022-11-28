@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  tor-first:
+    container_name: 'tor-first'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9990:8888'
+    environment:
+      - IP_CHANGE_SECONDS=60
+    restart: always
+    volumes:
+      - ./tor/torrc:/opt/tor/torrc
+      - ./tor/obfs4proxy:/usr/bin/obfs4proxy
+  tor-second:
+    container_name: 'tor-second'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9991:8888'
+    environment:
+      - IP_CHANGE_SECONDS=60
+    restart: always
+    volumes:
+      - ./tor/torrc:/opt/tor/torrc
+      - ./tor/obfs4proxy:/usr/bin/obfs4proxy
+  tor-third:
+    container_name: 'tor-third'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9992:8888'
+    environment:
+      - IP_CHANGE_SECONDS=60
+    restart: always
+    volumes:
+      - ./tor/torrc:/opt/tor/torrc
+      - ./tor/obfs4proxy:/usr/bin/obfs4proxy
+  tor-fourth:
+    container_name: 'tor-fourth'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9993:8888'
+    environment:
+      - IP_CHANGE_SECONDS=60
+    restart: always
+    volumes:
+      - ./tor/torrc:/opt/tor/torrc
+      - ./tor/obfs4proxy:/usr/bin/obfs4proxy
+  tor-fifth:
+    container_name: 'tor-fifth'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9994:8888'
+    environment:
+      - IP_CHANGE_SECONDS=60
+    restart: always
+    volumes:
+      - ./tor/torrc:/opt/tor/torrc
+      - ./tor/obfs4proxy:/usr/bin/obfs4proxy
