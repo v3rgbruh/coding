@@ -1,0 +1,4 @@
+this is a TEST!
+try to find string in this FILE
+xD
+bye.
