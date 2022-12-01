@@ -8,7 +8,7 @@ using std::cin;
 using std::string;
 
 template<typename T>
-void swap(T& a, T& b) {
+void Swap(T& a, T& b) {
     T temp = b;
     b = a;
     a = temp;
@@ -20,8 +20,8 @@ int main() {
     string astr = "a", bstr = "b";
     cout << "a: " << a << ", b:" << b << endl << "astr: " << astr << ", bstr:" << bstr << endl;
     cout << "_______________" << endl;
-    swap(a, b);
-    swap(astr, bstr);
+    Swap(a, b);
+    Swap(astr, bstr);
     cout << "a: " << a << ", b:" << b << endl << "astr: " << astr << ", bstr:" << bstr << endl;
 
 
